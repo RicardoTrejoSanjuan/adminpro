@@ -1,0 +1,68 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <form #userlogin="ngForm"
+          (ngSubmit)="onClickSubmit(userlogin.value)"
+          autocomplete="off">
+          <div class="card-header">
+            <strong>Change Password</strong>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="id_cliente">Id Client *</label>
+                  <input type="text"
+                    class="form-control"
+                    name="user"
+                    placeholder="Enter your Id Client"
+                    ngModel>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="name">Password *</label>
+                  <input type="text"
+                    class="form-control"
+                    name="password"
+                    placeholder="Enter your password"
+                    ngModel>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <input type="submit"
+              class="btn btn-primary"
+              value="Send">
+            <button type="reset"
+              class="btn btn-danger">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--/.col-->
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <strong>Request</strong>
+        </div>
+        <div class="card-body">
+          <pre>{{ req | json }}</pre>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <strong>Response</strong>
+        </div>
+        <div class="card-body">
+            <pre>{{ res | json }}</pre>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+</div>
